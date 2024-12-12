@@ -1,0 +1,19 @@
+{
+  "name": "DeFacts",
+  "symbol": "DFACT",
+  "description": "Collection of AI verified facts",
+  "image": "https://rim3qi36iu6y55tmt77rm7w3ved7cpdjjrhty2kl3tplkez3drmq.arweave.net/ihm4I35FPY72bJ__Fn7bqQfxPGlMTzxpS9zetRM7HFk",
+  "attributes": [
+    { "trait_type": "Creator", "value": "Mark Gleason" },
+    { "trait_type": "Category", "value": "Facts" },
+    { "trait_type": "Blockchain", "value": "Solana" }
+  ],
+  "properties": {
+    "files": [
+      {
+        "uri": "https://rim3qi36iu6y55tmt77rm7w3ved7cpdjjrhty2kl3tplkez3drmq.arweave.net/ihm4I35FPY72bJ__Fn7bqQfxPGlMTzxpS9zetRM7HFk",
+        "type": "image/svg"
+      }
+    ]
+  }
+}
