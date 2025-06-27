@@ -7,6 +7,17 @@ interface:
 
 
 
+balance:
+  enabled: true                # Enable token credit balances for users
+  startBalance: 100        # Initial tokens credited upon registration (adjust as needed)
+  autoRefillEnabled: false    # Enable automatic token refills (optional)
+  refillIntervalValue: 1     # Numerical value for refill interval (optional)
+  refillIntervalUnit: "days"  # Time unit for refill interval (optional)
+  refillAmount: 100         # Tokens added during each refill (optional)
+
+
+
+
 registration:
   socialLogins:
     - "discord"
