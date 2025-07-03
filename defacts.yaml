@@ -1,10 +1,7 @@
 version: 1.2.4
-
 cache: true
-
 interface:
   agents: true
-
 balance:
   enabled: true
   startBalance: 100
@@ -12,7 +9,6 @@ balance:
   refillIntervalValue: 1
   refillIntervalUnit: "days"
   refillAmount: 100
-
 registration:
   socialLogins:
     - "discord"
@@ -20,72 +16,8 @@ registration:
     - "github"
     - "google"
     - "openid"
-
 endpoints:
   custom:
-    # APIpie
-    - name: "APIpie"
-      apiKey: "${APIPIE_API_KEY}"
-      baseURL: "https://apipie.ai/v1/"
-      models:
-        default:
-          - gpt-4o
-          - claude-3-7-sonnet-latest
-          - deepseek-r1
-          - grok-3-beta
-        fetch: false
-      titleConvo: true
-      titleModel: "claude-3-haiku"
-      modelDisplayLabel: "APIpie"
-      iconURL: "https://raw.githubusercontent.com/fuegovic/lc-config-yaml/main/icons/APIpie.png"
-
-    # groq
-    - name: "groq"
-      apiKey: "${GROQ_API_KEY}"
-      baseURL: "https://api.groq.com/openai/v1/"
-      models:
-        default:
-          - deepseek-r1-distill-llama-70b
-          - llama-3.3-70b-versatile
-          - llama3-70b-8192
-          - llama3-8b-8192
-          - mixtral-8x7b-32768
-        fetch: false
-      titleConvo: true
-      titleModel: "mixtral-8x7b-32768"
-      modelDisplayLabel: "groq"
-
-    # Mistral AI
-    - name: "Mistral"
-      apiKey: "${MISTRAL_API_KEY}"
-      baseURL: "https://api.mistral.ai/v1"
-      models:
-        default:
-          - mistral-large-latest
-          - mistral-small-latest
-          - codestral-latest
-          - mistral-tiny
-        fetch: false
-      titleConvo: true
-      titleModel: "mistral-tiny"
-      modelDisplayLabel: "Mistral"
-
-    # OpenRouter
-    - name: "OpenRouter"
-      apiKey: "${OPENROUTER_KEY}"
-      baseURL: "https://openrouter.ai/api/v1"
-      models:
-        default:
-          - openrouter/auto
-          - anthropic/claude-3.7-sonnet
-          - openai/gpt-4o
-          - google/gemini-2.5-pro-preview
-          - meta-llama/llama-3.3-70b-instruct
-        fetch: false
-      titleConvo: true
-      titleModel: "openai/gpt-4o-mini"
-      modelDisplayLabel: "OpenRouter"
-
     # Perplexity
     - name: "Perplexity"
       apiKey: "${PERPLEXITY_API_KEY}"
@@ -102,7 +34,6 @@ endpoints:
       titleConvo: true
       titleModel: "sonar"
       modelDisplayLabel: "Perplexity"
-
     # xAI
     - name: "xAI"
       apiKey: "${XAI_API_KEY}"
