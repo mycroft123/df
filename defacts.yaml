@@ -24,15 +24,15 @@ endpoints:
       baseURL: "https://api.mistral.ai/v1"
       models:
         default:
-          - mistral-medium-2505
-          - magistral-medium-2506
-          - codestral-2501
-          - mistral-ocr-2505
-          - ministral-3b-2410
-          - ministral-8b-2410
-          - mistral-large-2411
-          - pixtral-large-2411
-          - mistral-small-2407
+          - mistral-tiny
+          - mistral-small-latest
+          - mistral-large-latest
+          - ministral-3b-latest
+          - ministral-8b-latest
+          - pixtral-large-latest
+          - mistral-medium-latest
+          - magistral-medium-latest
+          - codestral-latest
         fetch: false
       titleConvo: true
       titleModel: "mistral-small-2407"
