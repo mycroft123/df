@@ -4,11 +4,11 @@ interface:
   agents: true
 balance:
   enabled: true
-  startBalance: 100
+  startBalance: 10
   autoRefillEnabled: false
   refillIntervalValue: 1
   refillIntervalUnit: "days"
-  refillAmount: 100
+  refillAmount: 10
 registration:
   socialLogins:
     - "discord"
