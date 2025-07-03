@@ -18,25 +18,6 @@ registration:
     - "openid"
 endpoints:
   custom:
-    # Mistral AI
-    - name: "Mistral"
-      apiKey: "${MISTRAL_API_KEY}"
-      baseURL: "https://api.mistral.ai/v1"
-      models:
-        default:
-          - mistral-tiny
-          - mistral-small-latest
-          - mistral-large-latest
-          - ministral-3b-latest
-          - ministral-8b-latest
-          - pixtral-large-latest
-          - mistral-medium-latest
-          - magistral-medium-latest
-          - codestral-latest
-        fetch: false
-      titleConvo: true
-      titleModel: "mistral-small-2407"
-      modelDisplayLabel: "Mistral"
     # Perplexity
     - name: "Perplexity"
       apiKey: "${PERPLEXITY_API_KEY}"
@@ -59,12 +40,10 @@ endpoints:
       baseURL: "https://api.x.ai/v1"
       models:
         default:
-          - grok-2-1212
-          - grok-2-vision-1212
-          - grok-3-beta
-          - grok-3-mini-beta
-          - grok-beta
-          - grok-vision-beta
+          - grok-3-fast
+          - grok-3
+          - grok-3-mini-fast
+          - grok-3-mini
         fetch: false
       titleConvo: true
       titleMethod: "completion"
