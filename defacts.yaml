@@ -40,9 +40,8 @@ endpoints:
       titleConvo: true
       titleModel: "sonar"
       titleMessageRole: "user"
-      titleMethod: "completion"
       streaming: true
-      type: "perplexity"  # ← Try perplexity type
+      type: "perplexity"
       modelDisplayLabel: "DeFacts News AI"
       
     # DeFacts Research - For deep research
@@ -58,8 +57,9 @@ endpoints:
       iconURL: "https://raw.githubusercontent.com/mycroft123/df/bfb583e973a38f528231e2fb2303ebae6d10bca3/defacts.png"
       titleConvo: true
       titleModel: "sonar"
+      titleMessageRole: "user"
       streaming: false
-      type: "perplexity"  # ← Try perplexity type
+      type: "perplexity"
       modelDisplayLabel: "DeFacts Research AI"
       
     # DeFacts General - All-purpose
@@ -77,9 +77,10 @@ endpoints:
         fetch: false
       iconURL: "https://raw.githubusercontent.com/mycroft123/df/bfb583e973a38f528231e2fb2303ebae6d10bca3/defacts.png"
       titleConvo: true
-      streaming: false
-      type: "perplexity"  # ← Try perplexity type
       titleModel: "sonar"
+      titleMessageRole: "user"
+      streaming: false
+      type: "perplexity"
       modelDisplayLabel: "DeFacts AI"
       
     # Keep original Perplexity for compatibility
@@ -97,8 +98,9 @@ endpoints:
         fetch: false
       titleConvo: true
       titleModel: "sonar"
+      titleMessageRole: "user"
       streaming: false
-      type: "perplexity"  # ← Try perplexity type
+      type: "perplexity"
       modelDisplayLabel: "Perplexity (via DeFacts)"
       
     # xAI
@@ -113,8 +115,8 @@ endpoints:
           - grok-3-mini
         fetch: false
       titleConvo: true
-      titleMethod: "completion"
-      titleModel: "grok-beta"
+      titleModel: "grok-3-mini-fast"  # Changed from grok-beta which might not exist
+      titleMessageRole: "user"  # Added this
       streaming: false
-      type: "openai"  # ← Keep openai for xAI
+      type: "openai"
       modelDisplayLabel: "xAI"
