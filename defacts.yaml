@@ -21,7 +21,7 @@ endpoints:
     # Perplexity
     - name: "Perplexity"
       apiKey: "${PERPLEXITY_API_KEY}"
-      baseURL: "https://defacts-api-production.up.railway.app/v1/"
+      baseURL: "https://defacts-api-production.up.railway.app/v1"
       models:
         default:
           - r1-1776
