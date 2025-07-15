@@ -63,6 +63,8 @@ endpoints:
       iconURL: "https://raw.githubusercontent.com/mycroft123/df/bfb583e973a38f528231e2fb2303ebae6d10bca3/defacts.png"
       titleConvo: true
       titleModel: "sonar"
+      streaming: false
+      type: "openai"  # ← Add this!
       modelDisplayLabel: "DeFacts Research AI"
       # Higher token limits for research
       maxTokensDefault: 4000
@@ -82,6 +84,8 @@ endpoints:
         fetch: false
       iconURL: "https://raw.githubusercontent.com/mycroft123/df/bfb583e973a38f528231e2fb2303ebae6d10bca3/defacts.png"
       titleConvo: true
+      streaming: false
+      type: "openai"  # ← Add this!
       titleModel: "sonar"
       modelDisplayLabel: "DeFacts AI"
       
