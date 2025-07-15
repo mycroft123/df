@@ -16,7 +16,6 @@ registration:
     - "github"
     - "google"
     - "openid"
-
 endpoints:
   # Enable agents endpoint (for OpenAI, Anthropic, etc.)
   agents:
@@ -33,22 +32,22 @@ endpoints:
       baseURL: "https://defacts-api-production.up.railway.app/v1"
       models:
         default:
-          - sonar              # Best for news/current events
-          - sonar-pro          # Enhanced fact-checking
-          - sonar-deep-research # Deep investigative queries
+          - sonar
+          - sonar-pro
+          - sonar-deep-research
         fetch: false
       iconURL: "https://raw.githubusercontent.com/mycroft123/df/bfb583e973a38f528231e2fb2303ebae6d10bca3/defacts.png"
       titleConvo: true
       titleModel: "sonar"
-      streaming: false
-      type: "openai"  # ← Add this!
+      streaming: true  # ← Changed to true
+      # Remove type: "openai" - let LibreChat auto-detect
       modelDisplayLabel: "DeFacts News AI"
-      # Optional: Add system message for news focus
-      addParams:
-        system: "You are DeFacts AI, a specialized fact-checking assistant focused on objective analysis and empirical evidence. Always cite sources and provide balanced perspectives on current events."
+      # Add completion handling
       dropParams:
         - "stop"
         - "user"
+        - "frequency_penalty"
+        - "presence_penalty"
       
     # DeFacts Research - For deep research
     - name: "DeFacts Research"
@@ -56,17 +55,15 @@ endpoints:
       baseURL: "https://defacts-api-production.up.railway.app/v1"
       models:
         default:
-          - sonar-deep-research  # Primary model
-          - sonar-reasoning-pro  # For complex analysis
-          - r1-1776             # Latest reasoning model
+          - sonar-deep-research
+          - sonar-reasoning-pro
+          - r1-1776
         fetch: false
       iconURL: "https://raw.githubusercontent.com/mycroft123/df/bfb583e973a38f528231e2fb2303ebae6d10bca3/defacts.png"
       titleConvo: true
       titleModel: "sonar"
-      streaming: false
-      type: "openai"  # ← Add this!
+      streaming: true  # ← Changed to true
       modelDisplayLabel: "DeFacts Research AI"
-      # Higher token limits for research
       maxTokensDefault: 4000
       
     # DeFacts General - All-purpose
@@ -84,12 +81,11 @@ endpoints:
         fetch: false
       iconURL: "https://raw.githubusercontent.com/mycroft123/df/bfb583e973a38f528231e2fb2303ebae6d10bca3/defacts.png"
       titleConvo: true
-      streaming: false
-      type: "openai"  # ← Add this!
+      streaming: true  # ← Changed to true
       titleModel: "sonar"
       modelDisplayLabel: "DeFacts AI"
       
-    # Keep original Perplexity for compatibility
+    # Perplexity
     - name: "Perplexity"
       apiKey: "${PERPLEXITY_API_KEY}"
       baseURL: "https://defacts-api-production.up.railway.app/v1"
@@ -104,6 +100,7 @@ endpoints:
         fetch: false
       titleConvo: true
       titleModel: "sonar"
+      streaming: true  # ← Changed to true
       modelDisplayLabel: "Perplexity (via DeFacts)"
       
     # xAI
@@ -121,3 +118,4 @@ endpoints:
       titleMethod: "completion"
       titleModel: "grok-beta"
       modelDisplayLabel: "xAI"
+      type: "openai"  # xAI uses OpenAI-compatible API
