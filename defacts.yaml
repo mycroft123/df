@@ -37,7 +37,7 @@ endpoints:
           - sonar-pro          # Enhanced fact-checking
           - sonar-deep-research # Deep investigative queries
         fetch: false
-      iconURL: "📰"  # News emoji icon
+      iconURL: "https://raw.githubusercontent.com/mycroft123/df/bfb583e973a38f528231e2fb2303ebae6d10bca3/defacts.png"
       titleConvo: true
       titleModel: "sonar"
       modelDisplayLabel: "DeFacts News AI"
@@ -58,7 +58,7 @@ endpoints:
           - sonar-reasoning-pro  # For complex analysis
           - r1-1776             # Latest reasoning model
         fetch: false
-      iconURL: "🔬"  # Research emoji icon
+      iconURL: "https://raw.githubusercontent.com/mycroft123/df/bfb583e973a38f528231e2fb2303ebae6d10bca3/defacts.png"
       titleConvo: true
       titleModel: "sonar"
       modelDisplayLabel: "DeFacts Research AI"
@@ -78,7 +78,7 @@ endpoints:
           - sonar-deep-research
           - r1-1776
         fetch: false
-      iconURL: "🤖"  # Robot emoji icon
+      iconURL: "https://raw.githubusercontent.com/mycroft123/df/bfb583e973a38f528231e2fb2303ebae6d10bca3/defacts.png"
       titleConvo: true
       titleModel: "sonar"
       modelDisplayLabel: "DeFacts AI"
