@@ -39,7 +39,7 @@ endpoints:
       iconURL: "https://raw.githubusercontent.com/mycroft123/df/bfb583e973a38f528231e2fb2303ebae6d10bca3/defacts.png"
       titleConvo: true
       titleModel: "sonar"
-      titleMessageRole: "user"
+      titleMessageRole: "user"  # ← ADD THIS
       streaming: true
       type: "perplexity"
       modelDisplayLabel: "DeFacts News AI"
@@ -57,7 +57,7 @@ endpoints:
       iconURL: "https://raw.githubusercontent.com/mycroft123/df/bfb583e973a38f528231e2fb2303ebae6d10bca3/defacts.png"
       titleConvo: true
       titleModel: "sonar"
-      titleMessageRole: "user"
+      titleMessageRole: "user"  # ← ADD THIS
       streaming: false
       type: "perplexity"
       modelDisplayLabel: "DeFacts Research AI"
@@ -78,7 +78,7 @@ endpoints:
       iconURL: "https://raw.githubusercontent.com/mycroft123/df/bfb583e973a38f528231e2fb2303ebae6d10bca3/defacts.png"
       titleConvo: true
       titleModel: "sonar"
-      titleMessageRole: "user"
+      titleMessageRole: "user"  # ← ADD THIS
       streaming: false
       type: "perplexity"
       modelDisplayLabel: "DeFacts AI"
@@ -98,7 +98,7 @@ endpoints:
         fetch: false
       titleConvo: true
       titleModel: "sonar"
-      titleMessageRole: "user"
+      titleMessageRole: "user"  # ← ADD THIS
       streaming: false
       type: "perplexity"
       modelDisplayLabel: "Perplexity (via DeFacts)"
@@ -115,8 +115,8 @@ endpoints:
           - grok-3-mini
         fetch: false
       titleConvo: true
-      titleModel: "grok-3-mini-fast"  # Changed from grok-beta which might not exist
-      titleMessageRole: "user"  # Added this
+      titleModel: "grok-3-mini-fast"  # ← CHANGE THIS (grok-beta might not exist)
+      titleMessageRole: "user"  # ← ADD THIS
       streaming: false
       type: "openai"
       modelDisplayLabel: "xAI"
