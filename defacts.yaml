@@ -18,19 +18,72 @@ registration:
     - "openid"
 
 endpoints:
-  # Enable agents endpoint with custom provider support
+  # Enable agents endpoint (for OpenAI, Anthropic, etc.)
   agents:
-    # Allow agents to use custom endpoints
     allowedProviders:
       - "openai"
       - "anthropic"
       - "google"
-      - "custom"
-    # Optional: set recursion limit for agents
     recursionLimit: 10
     
   custom:
-    # DeFacts (Perplexity-compatible) - Primary
+    # DeFacts News - Specialized for news/fact-checking
+    - name: "DeFacts News"
+      apiKey: "${PERPLEXITY_API_KEY}"
+      baseURL: "https://defacts-api-production.up.railway.app/v1"
+      models:
+        default:
+          - sonar              # Best for news/current events
+          - sonar-pro          # Enhanced fact-checking
+          - sonar-deep-research # Deep investigative queries
+        fetch: false
+      iconURL: "📰"  # News emoji icon
+      titleConvo: true
+      titleModel: "sonar"
+      modelDisplayLabel: "DeFacts News AI"
+      # Optional: Add system message for news focus
+      addParams:
+        system: "You are DeFacts AI, a specialized fact-checking assistant focused on objective analysis and empirical evidence. Always cite sources and provide balanced perspectives on current events."
+      dropParams:
+        - "stop"
+        - "user"
+      
+    # DeFacts Research - For deep research
+    - name: "DeFacts Research"
+      apiKey: "${PERPLEXITY_API_KEY}"
+      baseURL: "https://defacts-api-production.up.railway.app/v1"
+      models:
+        default:
+          - sonar-deep-research  # Primary model
+          - sonar-reasoning-pro  # For complex analysis
+          - r1-1776             # Latest reasoning model
+        fetch: false
+      iconURL: "🔬"  # Research emoji icon
+      titleConvo: true
+      titleModel: "sonar"
+      modelDisplayLabel: "DeFacts Research AI"
+      # Higher token limits for research
+      maxTokensDefault: 4000
+      
+    # DeFacts General - All-purpose
+    - name: "DeFacts"
+      apiKey: "${PERPLEXITY_API_KEY}"
+      baseURL: "https://defacts-api-production.up.railway.app/v1"
+      models:
+        default:
+          - sonar
+          - sonar-pro
+          - sonar-reasoning
+          - sonar-reasoning-pro
+          - sonar-deep-research
+          - r1-1776
+        fetch: false
+      iconURL: "🤖"  # Robot emoji icon
+      titleConvo: true
+      titleModel: "sonar"
+      modelDisplayLabel: "DeFacts AI"
+      
+    # Keep original Perplexity for compatibility
     - name: "Perplexity"
       apiKey: "${PERPLEXITY_API_KEY}"
       baseURL: "https://defacts-api-production.up.railway.app/v1"
@@ -45,7 +98,7 @@ endpoints:
         fetch: false
       titleConvo: true
       titleModel: "sonar"
-      modelDisplayLabel: "Perplexity (DeFacts)"
+      modelDisplayLabel: "Perplexity (via DeFacts)"
       
     # xAI
     - name: "xAI"
