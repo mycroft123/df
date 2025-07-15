@@ -32,22 +32,15 @@ endpoints:
       baseURL: "https://defacts-api-production.up.railway.app/v1"
       models:
         default:
-          - sonar              # Best for news/current events
-          - sonar-pro          # Enhanced fact-checking
-          - sonar-deep-research # Deep investigative queries
+          - sonar
+          - sonar-pro
+          - sonar-deep-research
         fetch: false
       iconURL: "https://raw.githubusercontent.com/mycroft123/df/bfb583e973a38f528231e2fb2303ebae6d10bca3/defacts.png"
       titleConvo: true
       titleModel: "sonar"
-      streaming: true  # ← CHANGED TO TRUE!
-      # REMOVED type: "openai"
+      streaming: false
       modelDisplayLabel: "DeFacts News AI"
-      # Optional: Add system message for news focus
-      addParams:
-        system: "You are DeFacts AI, a specialized fact-checking assistant focused on objective analysis and empirical evidence. Always cite sources and provide balanced perspectives on current events."
-      dropParams:
-        - "stop"
-        - "user"
       
     # DeFacts Research - For deep research
     - name: "DeFacts Research"
@@ -55,18 +48,15 @@ endpoints:
       baseURL: "https://defacts-api-production.up.railway.app/v1"
       models:
         default:
-          - sonar-deep-research  # Primary model
-          - sonar-reasoning-pro  # For complex analysis
-          - r1-1776             # Latest reasoning model
+          - sonar-deep-research
+          - sonar-reasoning-pro
+          - r1-1776
         fetch: false
       iconURL: "https://raw.githubusercontent.com/mycroft123/df/bfb583e973a38f528231e2fb2303ebae6d10bca3/defacts.png"
       titleConvo: true
       titleModel: "sonar"
-      streaming: true  # ← CHANGED TO TRUE!
-      # REMOVED type: "openai"
+      streaming: false
       modelDisplayLabel: "DeFacts Research AI"
-      # Higher token limits for research
-      maxTokensDefault: 4000
       
     # DeFacts General - All-purpose
     - name: "DeFacts"
@@ -83,8 +73,7 @@ endpoints:
         fetch: false
       iconURL: "https://raw.githubusercontent.com/mycroft123/df/bfb583e973a38f528231e2fb2303ebae6d10bca3/defacts.png"
       titleConvo: true
-      streaming: true  # ← CHANGED TO TRUE!
-      # REMOVED type: "openai"
+      streaming: false
       titleModel: "sonar"
       modelDisplayLabel: "DeFacts AI"
       
@@ -103,7 +92,7 @@ endpoints:
         fetch: false
       titleConvo: true
       titleModel: "sonar"
-      streaming: true  # ← ADD THIS!
+      streaming: false
       modelDisplayLabel: "Perplexity (via DeFacts)"
       
     # xAI
@@ -120,5 +109,5 @@ endpoints:
       titleConvo: true
       titleMethod: "completion"
       titleModel: "grok-beta"
+      streaming: false
       modelDisplayLabel: "xAI"
-      type: "openai"  # ← Keep this one for xAI since it's OpenAI-compatible
