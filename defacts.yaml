@@ -40,6 +40,7 @@ endpoints:
       titleConvo: true
       titleModel: "sonar"
       streaming: false
+      type: "perplexity"  # ← Try perplexity type
       modelDisplayLabel: "DeFacts News AI"
       
     # DeFacts Research - For deep research
@@ -56,6 +57,7 @@ endpoints:
       titleConvo: true
       titleModel: "sonar"
       streaming: false
+      type: "perplexity"  # ← Try perplexity type
       modelDisplayLabel: "DeFacts Research AI"
       
     # DeFacts General - All-purpose
@@ -74,6 +76,7 @@ endpoints:
       iconURL: "https://raw.githubusercontent.com/mycroft123/df/bfb583e973a38f528231e2fb2303ebae6d10bca3/defacts.png"
       titleConvo: true
       streaming: false
+      type: "perplexity"  # ← Try perplexity type
       titleModel: "sonar"
       modelDisplayLabel: "DeFacts AI"
       
@@ -93,6 +96,7 @@ endpoints:
       titleConvo: true
       titleModel: "sonar"
       streaming: false
+      type: "perplexity"  # ← Try perplexity type
       modelDisplayLabel: "Perplexity (via DeFacts)"
       
     # xAI
@@ -110,4 +114,5 @@ endpoints:
       titleMethod: "completion"
       titleModel: "grok-beta"
       streaming: false
+      type: "openai"  # ← Keep openai for xAI
       modelDisplayLabel: "xAI"
