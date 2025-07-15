@@ -39,6 +39,8 @@ endpoints:
       iconURL: "https://raw.githubusercontent.com/mycroft123/df/bfb583e973a38f528231e2fb2303ebae6d10bca3/defacts.png"
       titleConvo: true
       titleModel: "sonar"
+      titleMessageRole: "user"
+      titleMethod: "completion"
       streaming: true
       type: "perplexity"  # ← Try perplexity type
       modelDisplayLabel: "DeFacts News AI"
