@@ -38,10 +38,11 @@ endpoints:
         fetch: false
       iconURL: "https://raw.githubusercontent.com/mycroft123/df/bfb583e973a38f528231e2fb2303ebae6d10bca3/defacts.png"
       titleConvo: true
+      titleMethod: "completion"  # Add this line
       titleModel: "sonar"
       titleMessageRole: "user"  # ← ADD THIS
       streaming: true
-      type: "perplexity"
+      type: "openai"
       modelDisplayLabel: "DeFacts News AI"
       
     # DeFacts Research - For deep research
