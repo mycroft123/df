@@ -16,9 +16,48 @@ registration:
     - "github"
     - "google"
     - "openid"
+
+# Agent configuration section
+agentsConfig:
+  enabled: true
+  # Allow agents to use custom endpoints
+  customEndpoints:
+    enabled: true
+    # Map custom endpoints to agents
+    endpoints:
+      - "Perplexity"
+      - "xAI"
+
 endpoints:
+  # Enable agents endpoint
+  agents:
+    # This tells LibreChat that agents can use custom endpoints
+    customProviders: true
+    # Default settings for agents
+    defaultEndpoint: "custom"
+    defaultModel: "sonar"
+    
   custom:
-    # Perplexity
+    # DeFacts (Perplexity-compatible)
+    - name: "DeFacts"
+      apiKey: "${PERPLEXITY_API_KEY}"
+      baseURL: "https://defacts-api-production.up.railway.app/v1"
+      models:
+        default:
+          - r1-1776
+          - sonar
+          - sonar-deep-research
+          - sonar-pro
+          - sonar-reasoning
+          - sonar-reasoning-pro
+        fetch: false
+      titleConvo: true
+      titleModel: "sonar"
+      modelDisplayLabel: "DeFacts AI"
+      # Make this endpoint available to agents
+      agentAccess: true
+      
+    # Keep original Perplexity for direct use
     - name: "Perplexity"
       apiKey: "${PERPLEXITY_API_KEY}"
       baseURL: "https://defacts-api-production.up.railway.app/v1"
@@ -34,6 +73,9 @@ endpoints:
       titleConvo: true
       titleModel: "sonar"
       modelDisplayLabel: "Perplexity"
+      # Make this endpoint available to agents
+      agentAccess: true
+      
     # xAI
     - name: "xAI"
       apiKey: "${XAI_API_KEY}"
@@ -49,3 +91,5 @@ endpoints:
       titleMethod: "completion"
       titleModel: "grok-beta"
       modelDisplayLabel: "xAI"
+      # Make this endpoint available to agents
+      agentAccess: true
